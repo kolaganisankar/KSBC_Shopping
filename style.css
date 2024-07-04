@@ -1,0 +1,244 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125vh;
+  background-color: #f5f5f5;
+}
+
+.product-container {
+  margin-top: 20px; /* Add margin on the top */
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.product-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.product-images img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnails img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.product-details {
+  flex: 1;
+  padding: 0 20px;
+}
+
+#product-title {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+#product-vendor, #product-price, #compare-at-price, #percentage-off {
+  margin: 5px 0;
+}
+
+#compare-at-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+#percentage-off {
+  color: red;
+  font-weight: bold;
+}
+
+.variant-selector {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.variant-selector label {
+  margin: 5px 0;
+}
+
+.color-selector, .size-selector {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#color-options, #size-options {
+  display: flex;
+}
+
+#color-options input, #size-options input {
+  display: none;
+}
+
+#color-options label {
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+#size-options label {
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  background-color: #999; /* Default background color */
+}
+#color-options label {
+  width: 30px;
+  height: 30px;
+}
+
+#color-options label span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+
+#color-options input:checked + label {
+  border: 2px solid #000;
+  background-color: white;
+  color: #fff;
+}
+
+#size-options label {
+  padding: 10px 20px;
+}
+
+#size-options input:checked + label {
+  border: 2px solid #000;
+  background-color: #0072b1;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  background-color: white; /* Background color for container */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  background-color: #0072b1;
+  border-radius:8px;
+}
+
+.quantity-selector button {
+  background-color: transparent; /* Transparent background */
+  color: white; /* Button text color */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.cart {
+  margin-left: 10px; /* Adjust spacing between quantity selector and cart */
+}
+
+.cart button {
+  background-color: #0072b1; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+#quantity {
+  flex: 1; /* Take remaining space */
+  text-align: center;
+  border: none;
+  background-color: transparent; /* Transparent background */
+  color: white; /* Inherit text color */
+  font-size: 1em; /* Adjust font size for input */
+  padding: 10px; /* Set padding to maintain input size */
+  border-radius: 8px;
+  width: 50px; /* Set a minimum width */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+.thumbnails img.active {
+  border: 2px solid #0072b1; /* Example border color for active thumbnail */
+}
+
+
+#add-to-cart {
+  background-color: #0072b1;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#add-to-cart i {
+  margin-right: 5px;
+}
+
+#add-to-cart-message {
+  margin-top: 10px;
+  color: green;
+}
+
+#description {
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .product-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .product-details {
+      padding: 0;
+  }
+
+  .variant-selector {
+      align-items: center;
+  }
+
+  .variant-selector select, .variant-selector input {
+      width: 100%;
+  }
+}

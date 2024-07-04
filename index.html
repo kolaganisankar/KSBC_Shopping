@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        #product-price {
+            color: #0072b1;
+            font-size: 1.5em; /* Adjust the size as needed */
+        }
+        #percentage-off {
+            margin-left: 10px; /* Adjust spacing between the elements */
+        }
+        </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-images">
+            <img id="main-image" src="" alt="Main Product Image">
+            <div class="thumbnails"></div>
+        </div>
+        <div class="product-details">
+            <p id="product-vendor"></p>
+            <h1 id="product-title"></h1>
+            <hr style="color: black;">
+            <br>
+            <div class="container">
+                <p id="product-price"></p>
+                <p id="percentage-off"></p>
+            </div>
+            <p id="compare-at-price"></p>
+            <hr style="color: #0072b1;">
+            <br>
+            <!-- <div class="variant-selector"> -->
+                <div class="color-selector">
+                    <label>Choose a Colour</label>
+                </div>
+                <div id="color-options"></div>
+                <hr style="color: black;">
+                <br>
+                <div class="size-selector">
+                    <label>Choose a Size</label>
+                </div>
+                <div id="size-options"></div>
+                <br>
+                <div class="container">
+                    <div class="quantity-selector">
+                        <button id="decrement">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button id="increment">+</button>
+                    </div>
+                    <div class="cart">
+                        <button id="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <hr style="color: black;">
+            <!-- </div> -->
+
+            <p id="add-to-cart-message"></p>
+            <div id="description"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
