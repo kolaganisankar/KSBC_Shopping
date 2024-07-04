@@ -7,7 +7,7 @@ Welcome to the coding assessment l2. We are excited to see your skills in action
 1. **Clone or Download:**
    - If using Git, clone the repository using the following command:
      ```
-     git clone https://github.com/mmdmrishabh/Coding-assessment-l2-Boilerplate-code.git
+     git clone https://github.com/kolaganisankar/KSBC_Shopping.git
      ```
    - Alternatively, download the code as a ZIP file and extract it.
 
